@@ -113,9 +113,10 @@ let countriesInfo = [
 // Step 5: Print the capital of one of the countries using string interpolation
 print("The Capital of Switzerland is \(countriesInfo["Switzerland", default: "no Capital provided"])")
 // Step 6: Use a set to store a collection of prime numbers and add five prime numbers to it
-
+var primeNumbers = Set([7,15])
+primeNumbers.insert(11)
 // Step 7: Check if a specific number is in the set using a boolean expression and print the result
-
+print("11 is in the Set: \(primeNumbers.contains(11))")
 // Step 8: Add more items to the array, dictionary, and set, then print them to see the updated collections
 
 // Step 9: Use string interpolation to create a detailed status message that includes information from the array, dictionary, and set
@@ -146,9 +147,29 @@ print("The Capital of Switzerland is \(countriesInfo["Switzerland", default: "no
 
 // Instructions:
 // - Declare an array to store names of different cities and perform operations like adding and removing cities.
+var cities: [String] = ["zürich", "bern"]
+print(cities)
+cities.append("basel")
+print(cities)
+cities.remove(at: 0)
+print(cities)
 // - Declare a dictionary to store country names as keys and their populations as values. Update the population for one country.
+var countryPop :[String:Int] = [
+    "Switherland": 1000, "Germany": 2000
+]
+print(countryPop)
+countryPop["Germany"] = 3000
+print(countryPop)
 // - Declare a set to store different types of fruits and check for the existence of a specific fruit.
+var fruits :Set<String> = Set(["kiwi", "apple", "orange"])
+fruits.contains("apple")
 // - Create an enum to represent different modes of transportation with associated values for their speeds. Use the enum to create constants and print their descriptions using string interpolation.
+enum transportation{
+    case train(speed: Int), car(speed: Int)
+}
+let car :transportation = transportation.car(speed: 240)
+print("\(car)")
 // - Ensure all variables and constants have explicit type annotations.
 // - Use boolean expressions to compare and print the lengths of the array and set.
 // - Use string interpolation to create and print a summary message that includes data from the array, dictionary, and set.
+
