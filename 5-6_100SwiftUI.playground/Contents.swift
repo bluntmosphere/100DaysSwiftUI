@@ -104,24 +104,24 @@ case .snow:
 // Step 4: Declare a Boolean Variable
 // Declare a boolean variable called isRegistered.
 // Initialize isRegistered with a default value of false.
-
+var isRegistered :Bool = false
 // Step 5: Check Registration Status
 // Use an if-else statement to print a message indicating whether the user is registered based on the value of isRegistered.
-
+print("Hi there! You are \(isRegistered ? "fully" : "not") registered")
 // Step 6: Update Registration Status
 // Update the value of isRegistered to true.
-
+isRegistered = true
 // Step 7: Declare an Optional Boolean Variable
 // Declare an optional boolean variable called isAdmin.
 // Leave isAdmin uninitialized.
-
+var isAdmin :Bool?
 // Step 8: Check Admin Status
 // Use optional binding (if let) to check if isAdmin has a value.
 // If isAdmin has a value, print whether the user is an admin or not.
 // If isAdmin is nil, print that the admin status is unknown.
+if let admin = isAdmin {
+    print("Hi there! You are \(admin ? "fully" : "not") admin")
+} else {
+    print("Hi there! The admin status is unknown")
+}
 
-// Step 9: Integrate Everything
-// Combine the Weather switch statement and the registration/admin status checks in a single function.
-// The function should first check the currentWeather and print the corresponding message.
-// Then, it should check the isRegistered status and print the corresponding message.
-// Finally, it should check the isAdmin status and print the corresponding message.
